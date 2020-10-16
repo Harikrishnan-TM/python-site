@@ -1,14 +1,16 @@
 <nav>
   <div class="nav-wrapper" style="background-color: #46aef3;">
-    <a style = "text-decoration:none;" href="#" class="brand-logo">Tutorials</a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a style = "text-decoration:none;" href="/">Home</a></li>
+    <!--<a style = "text-decoration:none;" href="#" class="brand-logo">Tutorials</a> -->
+    <ul id="nav-mobile" class="right hide-on-med-and-down"> 
+      <!--<li><a style = "text-decoration:none;" href="/">Home</a></li> -->
         
         
       {% if user.is_authenticated %}
-      <li><a style = "text-decoration:none;" href="/account">{{user.username|title}}</a></li>
+      <li><a style = "text-decoration:none;" href="">Hai, {{user.username|title}}</a></li>
+      <li><a style = "text-decoration:none;" href="/">Home</a></li>
       <li><a style = "text-decoration:none;" href="/logout">Logout</a></li>
  {% else %}
+     <li><a style = "text-decoration:none;" href="/">Home</a></li>
      <li><a style = "text-decoration:none;" href="/register">Register</a></li>
      <li><a style = "text-decoration:none;" href="/login">Login</a></li>
  {% endif %}
@@ -17,5 +19,7 @@
     </ul>
   </div>
 </nav> 
+
+
 
 
